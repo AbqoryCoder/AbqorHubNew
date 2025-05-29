@@ -4,7 +4,7 @@ local humanoid = character:WaitForChild("Humanoid")
 local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 local head = character:WaitForChild("Head")
 local camera = workspace.CurrentCamera
-loadstring(game:HttpGet("https://raw.githubusercontent.com/AbqoryCoder/AbqorHub/89b9c3f3d971754f44d474e59396ae67f57a19d1/Gui"))()
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/AbqoryCoder/AbqorHub/89b9c3f3d971754f44d474e59396ae67f57a19d1/Gui"))()
 
 local function setGradient(parent)
 	local gradient = Instance.new("UIGradient", parent)
