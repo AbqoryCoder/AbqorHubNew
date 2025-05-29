@@ -352,7 +352,63 @@ function settingsfunc()
 end
 
 
+mainFrame = addFrame('main')
+ mainFrame.Visible = true
+ characterFrame  = addFrame('character', 1.1)
+ visualFrame = addFrame('visual')
+ othersFrame = addFrame('others')
+ settingsFrame = addFrame('settings')
 
+--add button
+
+--Main
+addView('Version of The Script', '0.01 Universal Version', mainFrame, 0)
+addView('Creator of The Script', 'Abqor and Zentex Hacker(Helper)', mainFrame, 75)
+addView('Version of The Game', placeText, mainFrame, 150)
+
+--Character
+addButton('Infinite Jump', 'Allow You To Jump Unlimitedly', characterFrame, 0)
+addButton('Speed', 'Boost Your WalkSpeed To 40', characterFrame, 75)
+addButton('Fly', 'Allow You To Fly Across Every Object', characterFrame, 150)
+addButton('NoClip', 'Make You Can No Clipping Walls', characterFrame, 225)
+addButton('Fling To Sky', 'Make Ur Character Fling To Sky', characterFrame, 300)
+
+--Visual
+addButton('FullBright', 'Increase  Ur  Game Screen Brghtness', visualFrame, 0)
+addButton('Unlock Mouse', 'Unlock Your Mouse  (useful at Gun Game)', visualFrame, 75)
+addButton('Remove Fog', 'Remove Every Fog On The Server', visualFrame, 150)
+addView('Tp All To Me', 'Teleport All Player To Ur', visualFrame, 225)
+
+
+--  add tab name label
+mainTab = tabName('Main Tab')
+characterTab = tabName('Character Tab')
+visualTab = tabName('Visual Tab')
+othersTab = tabName('Others Tab')
+settingsTab = tabName('Settings Tab')
+mainTab.Visible = true
+
+
+main = addTab('Main', 0, function() 
+  mainfunc()
+end)
+setTrans(main,0.1)
+
+character = addTab('Character', 50, function()
+	characterfunc()
+end)
+
+visual = addTab('Visual', 100, function()
+	visualfunc()
+end)
+
+others = addTab("Others", 150, function()
+othersfunc()
+end)
+
+settings = addTab('Settings', 200, function()
+settingsfunc()
+end)
 
 
 
