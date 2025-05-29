@@ -1,3 +1,15 @@
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "AbqorHub", -- Required
+	Text = 'Universal Script Loaded', -- Required
+	Icon = '' -- Optional
+})
+
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "KeyBinds", -- Required
+	Text = 'Press "G" To Show The Gui', -- Required
+	Icon = '' -- Optional
+})
+
 local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 local humanoid = character:WaitForChild("Humanoid")
@@ -265,7 +277,9 @@ mainFrame = addFrame('main')
  settingsFrame = addFrame('settings')
 
 --add button
-
+local MarketplaceService = game:GetService("MarketplaceService")
+local placeVersion = MarketplaceService:GetProductInfo(game.PlaceId).Updated
+local placeText = "Version: " .. placeVersion
 --Main
 addView('Version of The Script', '0.01 Universal Version', mainFrame, 0)
 addView('Creator of The Script', 'Abqor and Zentex Hacker(Helper)', mainFrame, 75)
@@ -408,5 +422,13 @@ function settingsfunc()
 	othersTab.Visible = false
 	settingsTab.Visible = true
 end
+
+game:GetService("UserInputService").InputBegan:Connect(function(input)
+ if input.UserInputType == Enum.UserInputType.Keyboard then
+  if input.KeyCode == Enum.KeyCode.G then
+   background.Visible = not background.Visible
+  end
+ end
+end)
 
 
