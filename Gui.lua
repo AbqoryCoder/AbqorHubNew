@@ -14,11 +14,9 @@ local function setGradient(parent)
 	}
 end
 
-
 local ui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
 	ui.Name = 'abqorHub'
 	ui.ResetOnSpawn = false
-
 
 local background = Instance.new("Frame", ui)
 	background.Size = UDim2.new(0, 750, 0, 400)
@@ -46,13 +44,13 @@ local menu = Instance.new("TextButton", ui)
 	menu.MouseButton1Click:Connect(function()
 			background.Visible = not background.Visible
 		end)
-    
-	local menuStroke = Instance.new("UIStroke", menu)
+
+local menuStroke = Instance.new("UIStroke", menu)
 	menuStroke.ApplyStrokeMode = "Border"
-    menuStroke.Thickness = 3
+        menuStroke.Thickness = 3
 	menuStroke.Color =  Color3.fromRGB(248, 248, 255)
 
-    local label = Instance.new("TextLabel", background)
+   local label = Instance.new("TextLabel", background)
 	   label.Size = UDim2.new(0, 340, 0, 40)
 	   label.BackgroundTransparency = 1
 	   label.Text = "AbqorHub | Universal 0.01 Alpha"
@@ -73,7 +71,6 @@ local menu = Instance.new("TextButton", ui)
 	   label2.Position = UDim2.new(0.05, -50, 0.05, 1)
 	   Instance.new("UIStroke", label2).Thickness = 2
 
-
 local function addFrame(name, size)
    local btn = Instance.new("ScrollingFrame", background)
    btn.Name = name
@@ -92,63 +89,62 @@ end
 local btn = Instance.new("TextButton", parent)
 	btn.Size  = UDim2.new(0, 350, 0, 60)
 	btn.Position = UDim2.new(0.012, 0, 0.025, posY)
-    btn.BackgroundColor3 = Color3.fromRGB(13, 9, 7)
+       btn.BackgroundColor3 = Color3.fromRGB(13, 9, 7)
 	btn.BackgroundTransparency = 0.30
 	btn.Text = ''
 	btn.Active = true
 	btn.Draggable = false
     
     local btnStroke = Instance.new("UIStroke", btn)
-    btnStroke.ApplyStrokeMode = "Border"
-    btnStroke.Thickness = 2
+        btnStroke.ApplyStrokeMode = "Border"
+        btnStroke.Thickness = 2
 	btnStroke.Color =  Color3.fromRGB(248, 248, 255)
 	Instance.new("UICorner", btn).CornerRadius = UDim.new(0, 10)
 
+	local tl = Instance.new("TextLabel", btn)
+          tl.Size =  UDim2.new(0, 50, 0, 20)
+          tl.Position = UDim2.new(0.19, 0, 0.17, 0)
+          tl.Text = text
+          tl.TextSize = 20
+          tl.TextColor3 = Color3.fromRGB(248, 248, 255)
+          tl.BackgroundTransparency = 1
+          tl.Font = Enum.Font.GothamBold
 
-local tl = Instance.new("TextLabel", btn)
-   tl.Size =  UDim2.new(0, 50, 0, 20)
-   tl.Position = UDim2.new(0.19, 0, 0.17, 0)
-   tl.Text = text
-   tl.TextSize = 20
-   tl.TextColor3 = Color3.fromRGB(248, 248, 255)
-   tl.BackgroundTransparency = 1
-   tl.Font = Enum.Font.GothamBold
+      local tlStroke = Instance.new("UIStroke", tl)
+          tlStroke.ApplyStrokeMode = "Contextual"
+          tlStroke.Thickness = 2
+	  tlStroke.Color =  Color3.fromRGB(13, 9, 7)
 
-    local tlStroke = Instance.new("UIStroke", tl)
-    tlStroke.ApplyStrokeMode = "Contextual"
-    tlStroke.Thickness = 2
-	tlStroke.Color =  Color3.fromRGB(13, 9, 7)
-
-local tl2 = Instance.new("TextLabel", btn)
-   tl2.Size =  UDim2.new(0, 50, 0, 20)
-   tl2.Position = UDim2.new(0.35, 0, 0.45, 0)
-   tl2.Text = decription
-   tl2.TextSize = 15
-   tl2.TextColor3 = Color3.new(0.5, 0.5, 0.5)
-   tl2.BackgroundTransparency = 1
-   tl2.Font = Enum.Font.GothamBold
+	local tl2 = Instance.new("TextLabel", btn)
+         tl2.Size =  UDim2.new(0, 50, 0, 20)
+         tl2.Position = UDim2.new(0.35, 0, 0.45, 0)
+         tl2.Text = decription
+        tl2.TextSize = 15
+         tl2.TextColor3 = Color3.new(0.5, 0.5, 0.5)
+        tl2.BackgroundTransparency = 1
+       tl2.Font = Enum.Font.GothamBold
 
    local tl2Stroke = Instance.new("UIStroke", tl2)
     tl2Stroke.ApplyStrokeMode = "Contextual"
     tl2Stroke.Thickness = 1.5
-	tl2Stroke.Color =  Color3.fromRGB(13, 9, 7)
+    tl2Stroke.Color =  Color3.fromRGB(13, 9, 7)
 
-local sbtn = Instance.new("TextButton", btn)
+	local sbtn = Instance.new("TextButton", btn)
 	sbtn.Size  = UDim2.new(0, 30, 0, 30)
 	sbtn.Position = UDim2.new(0.83, 0, 0.25, 0)
-    sbtn.BackgroundColor3 = Color3.fromRGB(13, 9, 7)
+         sbtn.BackgroundColor3 = Color3.fromRGB(13, 9, 7)
 	sbtn.BackgroundTransparency = 0.75
 	sbtn.Text = ''
 	sbtn.Active = true
 	sbtn.Draggable = false
     
     local sbtnStroke = Instance.new("UIStroke", sbtn)
-    sbtnStroke.ApplyStrokeMode = "Border"
-    sbtnStroke.Thickness = 2
+        sbtnStroke.ApplyStrokeMode = "Border"
+        sbtnStroke.Thickness = 2
 	sbtnStroke.Color =  Color3.fromRGB(248, 248, 255)
 	Instance.new("UICorner", sbtn).CornerRadius = UDim.new(0, 10)
-    
-	local A = false
+
+        local A = false
 
     btn.MouseButton1Click:Connect(function()
 	A = not A
@@ -162,7 +158,7 @@ local sbtn = Instance.new("TextButton", btn)
 	func()
   end)
 
-  sbtn.MouseButton1Click:Connect(function()
+	 sbtn.MouseButton1Click:Connect(function()
 	A = not A
 	 if A then
     	sbtn.BackgroundColor3 = Color3.fromRGB(248, 248, 255)
@@ -173,24 +169,21 @@ local sbtn = Instance.new("TextButton", btn)
 	end
 	func()
   end)
-
 end
-
--- add Ui Like button but dont have   function
 
  local function addView(text, decription, parent, posY)
 local btn = Instance.new("TextButton", parent)
 	btn.Size  = UDim2.new(0, 350, 0, 60)
 	btn.Position = UDim2.new(0.012, 0, 0.025, posY)
-    btn.BackgroundColor3 = Color3.fromRGB(13, 9, 7)
+        btn.BackgroundColor3 = Color3.fromRGB(13, 9, 7)
 	btn.BackgroundTransparency = 0.30
 	btn.Text = ''
 	btn.Active = true
 	btn.Draggable = false
     
     local btnStroke = Instance.new("UIStroke", btn)
-    btnStroke.ApplyStrokeMode = "Border"
-    btnStroke.Thickness = 2
+        btnStroke.ApplyStrokeMode = "Border"
+        btnStroke.Thickness = 2
 	btnStroke.Color =  Color3.fromRGB(248, 248, 255)
 	Instance.new("UICorner", btn).CornerRadius = UDim.new(0, 10)
 
@@ -207,7 +200,7 @@ local tl = Instance.new("TextLabel", btn)
     local tlStroke = Instance.new("UIStroke", tl)
     tlStroke.ApplyStrokeMode = "Contextual"
     tlStroke.Thickness = 2
-	tlStroke.Color =  Color3.fromRGB(13, 9, 7)
+    tlStroke.Color =  Color3.fromRGB(13, 9, 7)
 
 local tl2 = Instance.new("TextLabel", btn)
    tl2.Size =  UDim2.new(0, 40, 0, 20)
@@ -221,10 +214,13 @@ local tl2 = Instance.new("TextLabel", btn)
    local tl2Stroke = Instance.new("UIStroke", tl2)
     tl2Stroke.ApplyStrokeMode = "Contextual"
     tl2Stroke.Thickness = 1.5
-	tl2Stroke.Color =  Color3.fromRGB(13, 9, 7)
+    tl2Stroke.Color =  Color3.fromRGB(13, 9, 7)
 
+	btn.MouseButton1Click:Connect(function()
+		func()
+	end)
 end
- -- tab label
+
 local function tabName(tabname)
 	local btn = Instance.new("TextLabel", background)
 	   btn.Size = UDim2.new(0, 340, 0, 40)
@@ -256,11 +252,11 @@ local function addTab(text, posY, func)
     Instance.new("UICorner", btn).CornerRadius = UDim.new(0, 6)
 
 	  btn.MouseButton1Click:Connect(function()
-        func()
+              func()
 		end)
 	return btn
 end
-
+	
 function setTrans(parents, num)
 parents.BackgroundTransparency = num
 end
@@ -338,21 +334,28 @@ function othersfunc()
 end
 
 function settingsfunc()
-   mainFrame.Visible = false
-  characterFrame.Visible = false
-  visualFrame.Visible = false   
-  othersFrame.Visible = false  
-  settingsFrame.Visible = true
-  setTrans(main,0.5)
-  setTrans(character,0.5
-  setTrans(visual,0.5) 
-    setTrans(others,0.5) 
-    setTrans(settings,0.1)
-    mainTab.Visible = false
-    characterTab.Visible = false 
-    visualTab.Visible = false 
-    othersTab.Visible = false  
-    settingsTab.Visible = true
+   mainFrame.Visible = false  
+	characterFrame.Visible = false  
+	visualFrame.Visible = false 
+	othersFrame.Visible = false
+	settingsFrame.Visible = true
+	setTrans(main,0.5)
+	setTrans(character,0.5)
+	setTrans(visual,0.5) 
+	setTrans(others,0.5)
+	setTrans(settings,0.1)
+	mainTab.Visible = false
+	characterTab.Visible = false
+	visualTab.Visible = false
+	othersTab.Visible = false
+	settingsTab.Visible = true
 end
 
 
+
+
+
+
+
+	
+    
