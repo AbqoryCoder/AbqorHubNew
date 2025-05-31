@@ -1,6 +1,6 @@
 function infjump()
    local InfiniteJumpEnabled = true
-      UserInputService.JumpRequest:connect(function()
+      game:GetService("UserInputService").JumpRequest:connect(function()
         if InfiniteJumpEnabled then
            game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
        end
